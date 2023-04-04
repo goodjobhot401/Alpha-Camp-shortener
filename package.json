@@ -18,5 +18,8 @@
     "mongoose": "^7.0.3",
     "node.js": "^0.0.1-security",
     "nodemon": "^2.0.22"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3"
   }
 }
