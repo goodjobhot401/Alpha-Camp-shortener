@@ -5,11 +5,15 @@
       <img src="https://assets-lighthouse.alphacamp.co/uploads/image/file/16716/ExportedContentImage_00.png"
         class="card-img-top" alt="img" style="width: 5em; margin:auto ">
       <div class="card-body mt-3">
-        <form action="/" method="POST" class="text-center">
-          <input type="text" id="originLink" name="originLink" class="mb-3" placeholder="請輸入網址..."
-            style="display: block; margin: auto;" required>
-          <button type="submit" class="btn btn-outline-primary">Shorten</button>
-        </form>
+        {{#with url}}
+        <p class="d-inline-block">成功縮短網址! 請使用下列連結進入:</p>
+        <a href="{{ this.originLink }}">
+          <p id="shortenLink">{{ this.shortenLink }}</p>
+        </a>
+        {{/with}}
+      </div>
+      <div class="card-bottom mt-2">
+        <button type="button" class="btn btn-primary btn-sm" id="copy">COPY</button>
       </div>
     </div>
   </div>
